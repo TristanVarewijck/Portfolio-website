@@ -19,6 +19,8 @@ $gradient-lightPink:#D921FD;
 body{
     background-color: $background-color; 
     color: $text-color; 
+    overflow-x:hidden;
+
 
     h1, h2, h3, h4, h5, h6{
         font-family: $titles-font;
@@ -30,17 +32,43 @@ body{
         height: 64px;
         left: 0px;
         top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        // div{
-        //     display: flex;
-        //     justify-content: space-between;
-        // }
-
-        div button{
-            background:none;
+        button{
+            background:none; 
+            padding:none;
             border:none;
-
+            width: 50px;
+            box-sizing: content-box;
         }
+
+        button:nth-of-type(1){
+            transform: scale(.5);
+            
+        }
+
+        button:nth-of-type(1):before,
+        button:nth-of-type(1):after,
+        button:nth-of-type(1) div {
+            background: #fff;
+            content: "";
+            display: block;
+            height: 6px;
+            border-radius: 3px;
+            margin: 7px 0;
+            transition: 0.5s;
+        }
+        button:nth-of-type(1):active:before {
+            transform: translateY(12px) rotate(135deg);
+        }
+        button:nth-of-type(1):active:after {
+            transform: translateY(-12px) rotate(-135deg);
+        }
+        button:nth-of-type(1):active div {
+            transform: scale(0);
+        } 
     }
 
     // title
@@ -90,16 +118,18 @@ body{
         }
     }
 
-    .grid-element {
+    //  grid art
+    #grid-element {
         position: absolute;
         width: 316px;
         height: 316px;
         left: 30px;
         top: 448px;
+        color: $text-color;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 1px 1px;
+        grid-gap: 3px;
         grid-auto-flow: row;
         grid-template-areas:
           ". . . . . . . . . . . . . . . . . . . . . . . . . . . ."
@@ -131,6 +161,15 @@ body{
           ". . . . . . . . . . . . . . . . . . . . . . . . . . . ."
           ". . . . . . . . . . . . . . . . . . . . . . . . . . . ."
           ". . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+
+          div{
+              background-color:white;
+              transition: .1s;
+          }
+
+          div:hover{
+              background-color: black; 
+          }
       }
       
 

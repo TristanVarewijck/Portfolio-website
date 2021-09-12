@@ -3,6 +3,7 @@
 body {
   background-color: #121212;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -14,11 +15,57 @@ body .navbar {
   height: 64px;
   left: 0px;
   top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .navbar div button {
+body .navbar button {
   background: none;
+  padding: none;
   border: none;
+  width: 50px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+body .navbar button:nth-of-type(1) {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+body .navbar button:nth-of-type(1):before,
+body .navbar button:nth-of-type(1):after,
+body .navbar button:nth-of-type(1) div {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .navbar button:nth-of-type(1):active:before {
+  -webkit-transform: translateY(12px) rotate(135deg);
+          transform: translateY(12px) rotate(135deg);
+}
+
+body .navbar button:nth-of-type(1):active:after {
+  -webkit-transform: translateY(-12px) rotate(-135deg);
+          transform: translateY(-12px) rotate(-135deg);
+}
+
+body .navbar button:nth-of-type(1):active div {
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 body h1 {
@@ -73,20 +120,31 @@ body .link-box div {
   height: 63px;
 }
 
-body .grid-element {
+body #grid-element {
   position: absolute;
   width: 316px;
   height: 316px;
   left: 30px;
   top: 448px;
+  color: #ffffff;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 1px 1px;
+  grid-gap: 3px;
   grid-auto-flow: row;
       grid-template-areas: ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+}
+
+body #grid-element div {
+  background-color: white;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+body #grid-element div:hover {
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
