@@ -10,7 +10,6 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 body .navbar {
-  position: absolute;
   width: 100%;
   height: 64px;
   left: 0px;
@@ -35,5 +34,59 @@ body h1 {
   font-size: 45px;
   line-height: 55px;
   letter-spacing: 0.02em;
+}
+
+body .link-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 185px;
+  position: absolute;
+  width: 184px;
+  height: 55px;
+  left: 30px;
+  top: 384px;
+  text-decoration: none;
+}
+
+body .link-box p {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 55px;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+body .link-box div {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  display: inline-block;
+  border: 1px solid #ffffff;
+  height: 63px;
+}
+
+body .grid-element {
+  position: absolute;
+  width: 316px;
+  height: 316px;
+  left: 30px;
+  top: 448px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-auto-flow: row;
+      grid-template-areas: ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . .";
 }
 /*# sourceMappingURL=style.css.map */
