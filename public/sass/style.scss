@@ -60,13 +60,13 @@ body{
             margin: 7px 0;
             transition: 0.5s;
         }
-        button:nth-of-type(1):active:before {
+        button:nth-of-type(1):focus:before {
             transform: translateY(12px) rotate(135deg);
         }
-        button:nth-of-type(1):active:after {
+        button:nth-of-type(1):focus:after {
             transform: translateY(-12px) rotate(-135deg);
         }
-        button:nth-of-type(1):active div {
+        button:nth-of-type(1):focus div {
             transform: scale(0);
         } 
     }
@@ -118,7 +118,7 @@ body{
         }
     }
 
-    //  grid art
+    // //  grid art
     #grid-element {
         position: absolute;
         width: 316px;
@@ -163,24 +163,77 @@ body{
           ". . . . . . . . . . . . . . . . . . . . . . . . . . . .";
       }
 
-      .menuBox{
+      
+    //   menuBox
+      .show{
             position: absolute;
             width: 188px;
             height: 100%;
             left: 0px;
             top: 40px;
             background: #121212;
+            z-index:1;
+            display: block;
+            transform:translate(-0%); 
+            transition: .2s; 
+        }
 
-            li{
-                font-family: $small-links-font;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 55px;
-                letter-spacing: 0.01em;
-                list-style-type: none;
+      #menuBox{
+            position: absolute;
+            width: 188px;
+            height: 100%;
+            left: 0px;
+            top: 40px;
+            background: #121212;
+            z-index:1;
+            display: block;
+            transform: translate(-100%);
+
+            ul{
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                
+                li{
+                    font-family: $small-links-font;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 25px;
+                    margin-bottom: 25px;
+                    letter-spacing: 0.01em;
+                    list-style-type: none;
+                }
+
+                li:first-of-type{
+                    margin-top: 3em;
+                }
+
             }
+
+            
       }
+
+      .aboutMe{
+        position: absolute;
+        width: 216px;
+        height: 55px;
+        left: 29px;
+        top: 830px;
+        
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 55px;
+        /* identical to box height, or 122% */
+        
+        letter-spacing: 0.02em;
+        
+        color: #FFFFFF;
+      }
+
+      
       
 
    

@@ -1,14 +1,23 @@
-// navbar behaviour
-function navbar(){
-    const navButton = document.getElementsByTagName('.navbar button:nth-of-type(1)'); 
-    navButton.addEventlistner('click', navbar); 
+const hamburger = document.getElementById("hamburger");
+hamburger.addEventListener("click", inAnOut);
 
-    if(menuBox.style.display == "block") { // if is menuBox displayed, hide it
-        menuBox.style.display = "none";
-      }
-      else { // if is menuBox hidden, display it
-        menuBox.style.display = "block";
+function inAnOut(){
+    const menuBox = document.getElementById("menuBox");
+    // menuBox.classList.toggle(".show");
+    if(menuBox.style.transform == 'translate(-100%)'){
+        menuBox.style.transform = 'translate(0%)';
+        menuBox.style.transition = '.2s ease-in'; 
+    } 
+    else{
+        menuBox.style.transform = 'translate(-100%)';
+        menuBox.style.transition = '.2 ease-out';
     }
 }
+
+
+
+
+
+
 
 
