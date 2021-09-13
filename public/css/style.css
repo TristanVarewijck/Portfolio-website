@@ -68,7 +68,7 @@ body .navbar button:nth-of-type(1):focus div {
           transform: scale(0);
 }
 
-body h1 {
+body header h1 {
   position: absolute;
   width: 100%;
   height: 209px;
@@ -83,7 +83,7 @@ body h1 {
   letter-spacing: 0.02em;
 }
 
-body .link-box {
+body header .work-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,7 +102,7 @@ body .link-box {
   text-decoration: none;
 }
 
-body .link-box p {
+body header .work-link p {
   color: #ffffff;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
@@ -112,7 +112,7 @@ body .link-box p {
   margin: 0;
 }
 
-body .link-box div {
+body header .link-element {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   display: inline-block;
@@ -120,11 +120,13 @@ body .link-box div {
   height: 63px;
 }
 
-body #grid-element {
+body header #grid-element {
+  margin: 0 auto;
   position: absolute;
   width: 316px;
   height: 316px;
-  left: 30px;
+  left: 29px;
+  right: 29px;
   top: 448px;
   color: #ffffff;
   display: -ms-grid;
@@ -133,9 +135,17 @@ body #grid-element {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 3px;
   grid-auto-flow: row;
-      grid-template-areas: ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+      grid-template-areas: ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+}
+
+body header #grid-element div {
+  width: 8px;
+  height: 8px;
+  border: 1px solid black;
+  background: #D921FD;
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 body .show {
@@ -194,19 +204,68 @@ body #menuBox ul li:first-of-type {
   margin-top: 3em;
 }
 
-body .aboutMe {
+body #about {
   position: absolute;
-  width: 216px;
+  width: 100%;
   height: 55px;
   left: 29px;
+  right: 29px;
   top: 830px;
-  font-family: Raleway;
+}
+
+body #about h1 {
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 45px;
   line-height: 55px;
   /* identical to box height, or 122% */
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+}
+
+body #about p {
+  font-family: "proxima_nova_scosflight";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: lowercase;
+  width: 315px;
+  /* or 122% */
+  letter-spacing: 0.01em;
+}
+
+body #about .contact-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 185px;
+  height: 55px;
+  left: 30px;
+  text-decoration: none;
+}
+
+body #about .contact-link p {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 55px;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+body #about .contact-link .link-element {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  display: inline-block;
+  border: 1px solid #ffffff;
+  height: 63px;
 }
 /*# sourceMappingURL=style.css.map */

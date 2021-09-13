@@ -14,6 +14,11 @@ function inAnOut(){
     }
 }
 
+const gridItems = 756; 
+for (i = 0; i < gridItems; i++){
+const div = document.createElement("div");                 // Create a <li> node         // Create a text node                             // Append the text to <li>
+document.getElementById("grid-element").appendChild(div);  
+}
 
 
 
