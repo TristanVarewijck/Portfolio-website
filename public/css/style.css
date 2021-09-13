@@ -206,7 +206,7 @@ body #menuBox ul li:first-of-type {
 
 body #about {
   position: absolute;
-  width: 100%;
+  width: 315px;
   height: 55px;
   left: 29px;
   right: 29px;
@@ -267,5 +267,11 @@ body #about .contact-link .link-element {
   display: inline-block;
   border: 1px solid #ffffff;
   height: 63px;
+}
+
+body #contact-form {
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
 }
 /*# sourceMappingURL=style.css.map */

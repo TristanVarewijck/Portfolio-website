@@ -1,9 +1,14 @@
 <% layout('../layout/boilerplate') -%>
 
+<!--  navbar  -->
 <nav>
 <%- include('../views/partials/navbar'); -%>
 </nav>
 
+<!-- contact form -->
+<!-- <%- include('../views/partials/contactForm'); -%> -->
+
+<!-- secret menu  -->
 <div id="menuBox" style="transform: translate(-100%)">
     <ul>
         <li>About me</li>
@@ -13,6 +18,7 @@
     </ul>
 </div>
 
+<!-- first page -->
 <header>
     <h1 class="main-title">Product development starts with Design</h1>
     
@@ -30,17 +36,26 @@
 </header>
 
 
-    <section id="about">
-        <h1>About me</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an  unknown printer took a galley
-        </p>
+<!-- about me  -->
+<section id="about">
+    <h1>About me</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an  unknown printer took a galley
+    </p>
 
-        <a class="contact-link" href="#contact">
-            <p>Contact me</p>
-            <div class="link-element"></div>
-            </a>
-    </section>
+    <a class="contact-link" href="#contact">
+        <p>Contact me</p>
+        <div class="link-element"></div>
+        </a>
+
+        <!--  skillset  -->
+        <div id="skillset-grid">
+
+
+        </div>
+
+        <%- include('../views/partials/commentForm'); -%>
+</section>
 
 

@@ -227,7 +227,7 @@ body{
 
       #about{
         position: absolute;
-        width: 100%;
+        width: 315px;
         height: 55px;
         left: 29px;
         right: 29px;
@@ -284,13 +284,16 @@ body{
                     height: 63px;
                 }
     }
-
 }
 
 
     
 
-      
+#contact-form{
+    position:absolute; 
+    bottom: 0; 
+    z-index:99
+}    
       
 
    
