@@ -32,23 +32,30 @@ app.get('/TristanVarewijck', (req, res) => {
 app.post('/TristanVarewijck', (req, res) => {
   let newComment = req.body.comment; 
   // push to database
-console.log(newComment);
+  console.log(newComment);
 
   res.render('index', {newComment}); 
 })
 
 // GET - all comments
-app.get('/TristanVarewijck/reviews', (req, res) => {
-
+app.get('/TristanVarewijck', (req, res) => {
   // all comments from database
-
 })
 
 //  WORK
 
 //  GET - all work
+app.get('/TristanVarewijck', (req, res) => {
+  
+})
 
 //  GET - 1 work piece
+app.get('/TristanVarewijck/:id', (req, res) => {
+})
+
+// CONTACT FORM
+app.post
+// POST - from to email
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
