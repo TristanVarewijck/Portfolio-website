@@ -54,7 +54,6 @@ app.get('/TristanVarewijck/:id', (req, res) => {
 })
 
 // CONTACT FORM
-app.post
 // POST - from to email
 
 app.listen(port, () => {

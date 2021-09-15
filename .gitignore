@@ -47,7 +47,6 @@ jspm_packages/
 web_modules/
 
 # css
-public/css/
 
 # fonts
 public/assets/fonts/
