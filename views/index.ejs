@@ -54,8 +54,59 @@
 
 
         </div>
+</section>
 
-        <%- include('../views/partials/commentForm'); -%>
+        
+        <section class="comment-section">
+            <h2>Flash Comments - Super Fast</h2>
+            <div class="post">
+      <!-- Put here Content like Youtube Video, Blog Post or Live Stream -->
+            </div>
+        </section>
+        <section>
+
+           <div class="flash-comments">
+                <div class="header">
+                    <div class="text">Comments</div>
+                </div>
+                <form class="pure-form" id="comment-form">
+                    <form class="pure-form" id="comment-form" action="/TristanVarewijck">
+                        <div class="comment-form">
+                            <div class="left-side">
+                                 <div class="row">
+                                     <input type="text" required placeholder="enter your name" id="new_comment_name">
+                                     <input placeholder="enter valid email" required type="email" id="new_comment_email">
+                                  </div>
+                                  <div class="row">
+                                      <textarea placeholder="enter comment text" required id="new_comment_text" rows="3"></textarea>
+                                  </div>
+                            </div>
+                           <div class="right-side">
+                                  <button type="submit" class="button-secondary pure-button">Send Comment</button>
+                           </div>
+                       </div>
+                      </form>
+                </form>
+                 <div class="comments-list" id="comments-list">
+                    <div class="comments-list" id="comments-list">
+                        <script id="comment-template" type="text/x-template">
+                            <div class="comment-info">
+                                
+                                <div class="row">
+                                      <div class="name">{{name}}</div>
+                                      <div class="email">{{email}}</div>
+                                 </div>
+                                 <div class="row">
+                                       <div class="text">{{comment}}</div>
+                                 </div>
+                             </div>
+                         </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
 </section>
 
 

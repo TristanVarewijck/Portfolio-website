@@ -6,11 +6,18 @@ const express = require('express'),
       
 const port = 3000;
 const path = require('path');
+const Pusher = require('pusher'); 
+const pusher = new Pusher({
+  appId: "1268067",
+  key: "b838f333e546486d5d14",
+  secret: "203ba280cb762662871e",
+  cluster: "eu",
+}); 
+
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-// parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.engine('ejs', engine);  
 app.set('view engine', 'ejs');
@@ -30,11 +37,15 @@ app.get('/TristanVarewijck', (req, res) => {
 
 // POST - comment 
 app.post('/TristanVarewijck', (req, res) => {
-  let newComment = req.body.comment; 
-  // push to database
-  console.log(newComment);
+   let newComment = {
+     name: req.body.name, 
+     email: req.body.email, 
+     comment: req.body.comment, 
+   }
 
-  res.render('index', {newComment}); 
+   console.log(newComment)
+   pusher.trigger('flash-comments', 'new_comment', newComment); 
+   res.json({created: true}); 
 })
 
 // GET - all comments
@@ -59,3 +70,13 @@ app.get('/TristanVarewijck/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 })
+
+
+//  404 pages
+app.use(function(req, res, next){
+  let error404 = new Error('Route Not Found'); 
+  error404.status = 404; 
+  next(error404); 
+});
+
+module.exports = app; 
