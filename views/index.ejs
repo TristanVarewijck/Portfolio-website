@@ -57,18 +57,9 @@
 </section>
 
         
-        <section class="comment-section">
-            <h2>Flash Comments - Super Fast</h2>
-            <div class="post">
-      <!-- Put here Content like Youtube Video, Blog Post or Live Stream -->
-            </div>
-        </section>
+        
         <section>
-
            <div class="flash-comments">
-                <div class="header">
-                    <div class="text">Comments</div>
-                </div>
                 <form class="pure-form" id="comment-form">
                     <form class="pure-form" id="comment-form" action="/TristanVarewijck">
                         <div class="comment-form">
@@ -88,12 +79,13 @@
                       </form>
                 </form>
                  <div class="comments-list" id="comments-list">
+                    <!-- Comments in DATABASE come here! -->
+
                     <div class="comments-list" id="comments-list">
                         <script id="comment-template" type="text/x-template">
                             <div class="comment-info">
-                                
                                 <div class="row">
-                                      <div class="name">{{name}}</div>
+                                      <div class="name">{{new}}</div>
                                       <div class="email">{{email}}</div>
                                  </div>
                                  <div class="row">
