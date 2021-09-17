@@ -27,27 +27,20 @@ async function main() {
 const commentSchema = new mongoose.Schema({
   name:{
     type: String, 
-    // required: true, 
+    required: true, 
   }, 
   email: {
     type: String, 
-    // required: true, 
+    required: true, 
   },
   comment: {
     type: String, 
-    // required: true, 
+    required: true, 
+    max:[150, 'To many characters...']
   }
 });
 
 const Comment = mongoose.model('Comment', commentSchema);
-
-// async function saveToDatabase(){
-//   await newComment.save();
-// }; 
-
-// saveToDatabase())
-
-
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -65,29 +58,21 @@ app.get('/', (req, res) => {
 app.get('/TristanVarewijck', async(req, res) => {
   //  get all comments
   let allComments = await Comment.find({});
-  console.log(allComments);
-  res.render('index', allComments);
-})
-
-
-//  COMMENTS 
-
+  res.render('index', {allComments});
+}) 
 
 // POST - comment 
 app.post('/TristanVarewijck', async(req, res) => {
-   
     let newComment = {
      name: req.body.name, 
      email: req.body.email, 
      comment: req.body.comment, 
    }
 
-
   //  add comment to database
    let savedComment = new Comment(newComment); 
-    savedComment.save(function(){})
+       savedComment.save(function(){})
    
-
    pusher.trigger('flash-comments', 'new_comment', newComment); 
    res.json({created: true});  
 })

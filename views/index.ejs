@@ -80,7 +80,18 @@
                 </form>
                  <div class="comments-list" id="comments-list">
                     <!-- Comments in DATABASE come here! -->
-
+                    <div class="comment-info">
+                        <% allComments.forEach(function(comment) {%>
+                            <div class="row">
+                                <div class="name"><%= comment.name %></div>
+                                <div class="email"><%= comment.email %></div>
+                           </div>
+                           <div class="row">
+                                 <div class="text"><%= comment.comment %></div>
+                           </div>
+                        <% }); %> 
+                        
+                    </div>
                     <div class="comments-list" id="comments-list">
                         <script id="comment-template" type="text/x-template">
                             <div class="comment-info">
