@@ -41,7 +41,6 @@ const commentSchema = new mongoose.Schema({
 
 const Comment = mongoose.model('Comment', commentSchema);
 
-
 // async function saveToDatabase(){
 //   await newComment.save();
 // }; 
@@ -73,8 +72,9 @@ app.get('/TristanVarewijck', async(req, res) => {
 
 //  COMMENTS 
 
+
 // POST - comment 
-app.post('/TristanVarewijck',(req, res) => {
+app.post('/TristanVarewijck', async(req, res) => {
    
     let newComment = {
      name: req.body.name, 
@@ -82,8 +82,14 @@ app.post('/TristanVarewijck',(req, res) => {
      comment: req.body.comment, 
    }
 
+
+  //  add comment to database
+   let savedComment = new Comment(newComment); 
+    savedComment.save(function(){})
+   
+
    pusher.trigger('flash-comments', 'new_comment', newComment); 
-   res.json({created: true}); 
+   res.json({created: true});  
 })
 
 // GET - all comments
