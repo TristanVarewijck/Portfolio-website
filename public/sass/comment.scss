@@ -1,10 +1,27 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../assets/fonts/stylesheet.css'); 
+// fonts
+$titles-font:'Raleway', sans-serif;
+$text-font: "proxima_nova_scosf";  // " + font style" 
+$small-links-font:'Poppins', sans-serif;
+
+//  colors
+$background-color:#121212;
+$text-color:#ffffff; 
+$text-section-color:#000000; 
+$gradient-darkBlue:#5E98EF; 
+$gradient-lightBlue:#02F0E4;  
+$gradient-darkPink:#811AD7; 
+$gradient-lightPink:#D921FD;
+
 // COMMENT FORM
 .flash-comments{
     border:1px solid #aeaeae;
     border-radius: 10px;
     width:100%;
     position: absolute;
-    bottom: 5;
+    bottom: 5;  
 }
 
 .comment-section{
