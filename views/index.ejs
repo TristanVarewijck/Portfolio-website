@@ -1,57 +1,52 @@
 <% layout('../layout/boilerplate') -%>
 
-<!--  navbar  -->
+<!-- navbar -->
 <nav>
-<%- include('../views/partials/navbar'); -%>
+    <ul>
+        <li id="hamburger"><button><img src="assets/hamburger.svg" alt="hamburger"></button></li>
+        <li><button><img src="assets/darkmode.svg" alt="darkmode-switch"></button></li>
+    </ul>
 </nav>
 
-<!-- secret menu  -->
-<div id="menuBox" style="transform: translate(-100%)">
+<!-- mobile menu -->
+<aside>
     <ul>
-        <li>About me</li>
-        <li>My Work</li>
-        <li>Testimonials</li>
-        <li>Contact me / inquires</li>
+        <a href="#"><li>About me</li></a>
+        <a href="#"><li>My Work</li></a>
+        <a href="#"><li>Contact</li></a>
     </ul>
-</div>
 
-<!-- first page -->
+    <ul>
+        <a href="#"><li><img src="assets/github.svg" alt="Github-link"></li></a>
+        <a href="#"><li><img src="assets/linkedin.svg" alt="Linkin-link"></li></a>
+    </ul>
+</aside>
+
 <header>
-    <h1 class="main-title">Product development starts with Design</h1>
-    
-    <a class="work-link" href="#myWork">
-    <p>My Work</p>
-    <div class="link-element"></div>
-    </a>
-
-    <!-- <div id="grid-element">
-    </div> -->
-
-    <div id="grid-element">
-        <!-- <img src="assets/artboard.svg" alt="artboard"> -->
+    <h1>Product development starts with design</h1>
+    <a class="action" href="#">My Work</a>
+    <div>
     </div>
 </header>
 
-
-<!-- about me  -->
-<section id="about">
+<section class="about">
     <h1>About me</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an  unknown printer took a galley
-    </p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  unknown printer took a galley</p>
+    <a class="action" href="#">Contact me</a>
+    <h2>skillset</h2>
+    <div class="skill-grid">
+        <div><p>Node.js</p></div>
+        <div><p>UI/UX</p></div>
+        <div><p>Branding</p></div>
+        <div><p>Html/css</p></div>
+        <div><p>React.js</p></div>
+        <div><p>Javascript</p></div>
+        <div><p>Adobe</p></div>
+        <div><p>Database</p></div>
+        <div><p>Responsive</p></div>
+    </div>
 
-    <a class="contact-link" href="#contact">
-        <p>Contact me</p>
-        <div class="link-element"></div>
-        </a>
-
-        <!--  skillset  -->
-        <div id="skillset-grid">
 
 
-        </div>
-</section>
 
-<!-- comments -->
 

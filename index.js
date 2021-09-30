@@ -46,7 +46,7 @@ const Comment = mongoose.model('Comment', commentSchema);
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(morgan('tiny'));
+// app.use(morgan('tiny'));
 
 app.engine('ejs', engine);  
 app.set('view engine', 'ejs');
