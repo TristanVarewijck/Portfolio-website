@@ -26,6 +26,16 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Raleway", sans-serif;
 }
 
+body h2 {
+  margin: 2em 0 1em 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+}
+
+body ul {
+  padding: 0;
+}
+
 body .action {
   position: relative;
   text-decoration: none;
@@ -214,17 +224,12 @@ body .about h1 {
   font-size: 3em;
 }
 
-body .about p {
+body .about .subtitle {
   font-size: 1em;
   font-family: "proxima_nova_scosfregular";
   line-height: 19px;
   letter-spacing: 0.01em;
-}
-
-body .about h2 {
   margin-bottom: 2em;
-  font-family: "Raleway", sans-serif;
-  font-size: 1em;
 }
 
 body .about .skill-grid {
@@ -258,7 +263,7 @@ body .about .skill-grid div {
   -ms-flex-line-pack: center;
       align-content: center;
   margin: 0;
-  padding: 1em;
+  padding: .3em;
   background-color: #121212;
 }
 
@@ -272,9 +277,62 @@ body .about .skill-grid div:after {
   z-index: -1;
   border-radius: 2px;
   background: linear-gradient(199.37deg, #D921FD 5.37%, #811AD7 94.08%);
+  -webkit-animation: gradient infinite 2s;
+          animation: gradient infinite 2s;
 }
 
 body .about .skill-grid div:nth-child(2n):after {
   background: linear-gradient(199.37deg, #02F0E4 5.37%, #5E98EF 94.08%);
+}
+
+body .about .testimonials-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .about .testimonials-list li .img-box {
+  position: relative;
+}
+
+body .about .testimonials-list li .img-box img {
+  width: 74px;
+  height: 74px;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+
+body .about .testimonials-list li .img-box::after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: calc(50% - 2px);
+  z-index: -1;
+  width: 2px;
+  height: 100%;
+  background: green;
+}
+
+body .about .testimonials-list li .person-box {
+  margin-top: 37px;
+  display: inline-block;
+}
+
+body .about .testimonials-list li .person-box h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  margin: 0;
+}
+
+body .about .testimonials-list li .person-box p {
+  margin-top: 1.5em;
 }
 /*# sourceMappingURL=style.css.map */
